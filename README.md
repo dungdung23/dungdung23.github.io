@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <a href="https://jekyll-themes.com">
 <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
@@ -56,3 +57,6 @@ Check out for more themes: [**Jekyll Themes**](http://jekyll-themes.com).
 ## License
 
 This project is licensed under the [MIT license](LICENSE.txt).
+=======
+# Welcome to my world
+>>>>>>> c8ecdde6d9de451a3c46067bec7868b6c7b2aca7
