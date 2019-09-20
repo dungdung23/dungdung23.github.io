@@ -1,29 +1,129 @@
----
-layout: default
----
+<!--
+andrewcui.com
+2018
+-->
+<!DOCTYPE html>
+<html lang="en-US">
 
+<head>
+  <!-- website metadata -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Andrew Cui</title>
+  <meta name="title" content="Andrew Cui" />
+  <meta name="author" content="Andrew Cui">
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#EC407A" />
+  <link rel="canonical" href="https://www.andrewcui.com">
 
-{% include career-profile.html %}
+  <!-- bootstrap 4.0 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- style packages -->
+  <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400|Libre+Franklin:300,500|Work+Sans:200,300,400" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/site/logo.png" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
+  <!-- CSS (ministyle: no-space CSS)-->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
 
-{% include news.html %}
+<!-- website content -->
 
-{% include publications.html %}
+<body>
+  <main>
+    <section id="head">
+      <div class="container-fluid">
+        <img class="img-fluid rounded-circle mx-auto" src="img/site/profile.jpg" id="profile-img" />
+        <h1>Andrew Cui</h1>
+        <h5 class="text-center uppercase mb-3"><b>University of Pennsylvania</b></h5>
+        <p class="text-center m-auto" id="profile-summary">
+          Engineering, statistics, and business student interested in data science, business strategy, and technology products. Side passions for sports analytics, cooking, and photography.
+        </p>
+        <div class="dots mt-4 my-2 py-2 px-5"></div>
+        <h5 class="text-center uppercase mt-3 mb-3"><b>Background</b></h5>
+        <div class="row d-flex align-items-center justify-content-center" id="intro">
+          <div class="col-2 px-4">
+            <img src="img/logo/lse.png" class="img-fluid"/>
+          </div>
+          <div class="col-2 px-4">
+            <img src="img/logo/penn.jpg" class="img-fluid"/>
+          </div>
+          <div class="col-2 px-4">
+            <img src="img/logo/capitalone.jpg" class="img-fluid"/>
+          </div>
+          <div class="col-2 px-4">
+            <img src="img/logo/optiver.png" class="img-fluid"/>
+          </div>
+        </div>
+        <div class="dots mt-4 my-2 py-2 px-5"></div>
+        <h5 class="text-center uppercase mt-3 mb-3"><b>Contact</b></h5>
+        <div class="mt-4 mx-auto d-flex justify-content-center" id="profile-links">
+          <a href="https://www.linkedin.com/in/andrew-cui" target="_blank"><i class="fab fa-linkedin icon"></i></a>
+          <a href="https://github.com/andrew-cui" target="_blank"><i class="fab fa-github icon"></i></a>
+          <a href="https://twitter.com/AndrewYCui" target="_blank"><i class="fab fa-twitter icon"></i></a>
+          <a href="mailto:email@andrewcui.com?Subject=[andrewcui.com] " target="_blank"><i class="fas fa-envelope icon"></i></a>
+        </div>
+    </section>
+  </main>
 
-{% include educationcomplete.html %}
+  <footer>
+    <div class="ml-auto px-3 mt-4">
+      <p class="text-center" id="copyright">&copy; Andrew Cui, 2018</p>
+    </div>
+  </footer>
 
-{% include experiences.html %}
+  <!-- bootstrap, jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-{% include projects.html %}
+  <!-- custom javascript -->
+  <script>
+    $(window).on('resize', function() {
+      var win = $(this);
+      if (win.width() > 768) {
+        $('#navbarNav').removeClass('show');
+        $('#navbarNav').removeClass('collapsing');
+      }
+    });
+  </script>
+  <script>
+    $(window).scroll(function() {
+      var scrolled = $(this).scrollTop() > 400
+      $('nav').toggleClass('scrolled', scrolled);
+      $('.navbar-collapse').toggleClass('scrolled', scrolled);
+      $('.navbar-nav').toggleClass('scrolled', scrolled);
+    });
+  </script>
+  <!-- border-bottom: ; -->
+</body>
 
+<!-- google analytics -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-98375828-1', 'auto');
-  ga('send', 'pageview');
+  (function(i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+
+  ga("create", "UA-86802917-1", "auto");
+  ga("require", "GTM-T2HV9W9");
+  ga("send", "pageview");
 </script>
+
+<!--
+[special thanks to the creators of]
+Bootstrap 4.0
+Google Analytics
+Google Material Design
+Google Fonts
+FontAwesome 5 -->
+
+</html>
